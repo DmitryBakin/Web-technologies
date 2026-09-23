@@ -5,6 +5,8 @@
     --font-heading: Arial, sans-serif;
 }
 
+h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--primary); }
+
 h1 { 
     position: static;
 }
