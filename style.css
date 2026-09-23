@@ -5,8 +5,43 @@
     --font-heading: Arial, sans-serif;
 }
 
+h1 { 
+    position: static;
+}
+
 .projects-grid {
     display: grid;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+.project-card .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .6);
+    opacity: 0;
+    transition: opacity 1s;
+    pointer-events: none;
+}
+
+.project-card:hover .overlay {
+     opacity: 0.5; 
+}
+
+.project-card h4 {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    transition: font-size 0.3s, color 0.3s;
+}
+.project-card:hover h4 {
+    font-size: 1.6em;
+    color: var(--accent);
 }
 
 .btn-submit {
