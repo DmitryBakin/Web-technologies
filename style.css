@@ -12,5 +12,13 @@
     border: 2px solid transparent;
     cursor: pointer;
 }
-.btn-submit:hover  { background: #1a1a1a; }
-.btn-submit:active { background: #333; }
+.btn-submit:hover  { 
+    background: #1a1a1a;
+}
+.btn-submit:active {
+     background: #333; 
+}
+.btn-submit:focus {
+    outline: none;
+    border-color: #b91c1c;
+}
