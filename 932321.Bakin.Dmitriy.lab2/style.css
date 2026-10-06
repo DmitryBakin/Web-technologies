@@ -1,6 +1,8 @@
 :root {
     --primary: #000000;
     --accent:  #d4af37;
+    --bg:      #d4af37;
+    --text:    #000000;
     --font-main:    Georgia, serif;
     --font-heading: Arial, sans-serif;
 }
