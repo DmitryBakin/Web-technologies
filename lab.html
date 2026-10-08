@@ -2,181 +2,32 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description"
-          content="Персональная страница Дмитрия Бакина — любителя кино и сериалов: топ фильмов, любимые режиссёры, навыки и обратная связь.">
-    <title>О себе — Любитель кино и сериалов</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <title>О себе</title>
 </head>
-
 <body>
     <header>
-        <span class="badge" aria-hidden="true">★</span>
+        <span class="badge">★</span>
         <h1>Любитель кино и сериалов</h1>
         <h2>Бакин Дмитрий</h2>
 
-        <figure class="hero">
+        <figure>
             <img src="https://skyteach.ru/wp-content/cache/thumb/a5/6819de9b3c255a5_920x0.jpg"
-                 alt="Портрет Дмитрия Бакина" width="460" height="265">
+                 alt="Портрет Дмитрия" width="460" height="265">
         </figure>
-
-        <!-- Flexbox: горизонтальное адаптивное меню -->
-        <nav class="main-nav" aria-label="Основная навигация">
-            <a href="#movies">Топ фильмов</a>
-            <a href="#directors">Режиссёры</a>
-            <a href="#skills">Навыки</a>
-            <a href="#feedback">Обратная связь</a>
-        </nav>
     </header>
 
-    <div class="layout">
-        <main>
-            <!-- FLEX-КАРТОЧКИ -->
-            <section id="movies" aria-labelledby="movies-title">
-                <h3 id="movies-title">Топ фильмов для просмотра</h3>
+    <nav>
+        <ul>
+            <li><a href="#top-films">Топ фильмов</a></li>
+            <li><a href="#directors">Режиссёры</a></li>
+            <li><a href="#feedback">Обратная связь</a></li>
+        </ul>
+    </nav>
 
-                <div class="movies-flex">
-                    <article class="movie-card">
-                        <img class="poster" src="https://picsum.photos/seed/avatar2009/160/240"
-                             alt="Постер фильма «Аватар»" width="80" height="120" loading="lazy">
-                        <div class="movie-info">
-                            <h4>
-                                <a href="https://www.kinopoisk.ru/film/251733/"
-                                   target="_blank" rel="noopener">Аватар</a>
-                            </h4>
-                            <p class="movie-meta">
-                                <span class="genre">Фантастика</span>
-                                <time datetime="2009">2009</time>
-                            </p>
-                            <p class="movie-desc">Планета Пандора, на`ви и борьба за дом.</p>
-                        </div>
-                    </article>
-
-                    <article class="movie-card">
-                        <img class="poster" src="https://picsum.photos/seed/interstellar2014/160/240"
-                             alt="Постер фильма «Интерстеллар»" width="80" height="120" loading="lazy">
-                        <div class="movie-info">
-                            <h4>
-                                <a href="https://www.kinopoisk.ru/film/258687/"
-                                   target="_blank" rel="noopener">Интерстеллар</a>
-                            </h4>
-                            <p class="movie-meta">
-                                <span class="genre">Фантастика</span>
-                                <time datetime="2014">2014</time>
-                            </p>
-                            <p class="movie-desc">Путешествие сквозь червоточину ради будущего Земли.</p>
-                        </div>
-                    </article>
-
-                    <article class="movie-card">
-                        <img class="poster" src="https://picsum.photos/seed/coach2018/160/240"
-                             alt="Постер фильма «Тренер»" width="80" height="120" loading="lazy">
-                        <div class="movie-info">
-                            <h4>
-                                <a href="https://www.kinopoisk.ru/film/981230/"
-                                   target="_blank" rel="noopener">Тренер</a>
-                            </h4>
-                            <p class="movie-meta">
-                                <span class="genre">Драма</span>
-                                <time datetime="2018">2018</time>
-                            </p>
-                            <p class="movie-desc">Спорт, характер и второй шанс для команды.</p>
-                        </div>
-                    </article>
-
-                    <article class="movie-card">
-                        <img class="poster" src="https://picsum.photos/seed/baronecall/160/240"
-                             alt="Постер сериала «Бар «Один звонок»»" width="80" height="120" loading="lazy">
-                        <div class="movie-info">
-                            <h4>
-                                <a href="https://www.kinopoisk.ru/series/5333424/"
-                                   target="_blank" rel="noopener">Бар «Один звонок»</a>
-                            </h4>
-                            <p class="movie-meta">
-                                <span class="genre">Комедия</span>
-                                <time datetime="2024">2024</time>
-                            </p>
-                            <p class="movie-desc">Один бар, один звонок и очень разные судьбы.</p>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section id="skills" aria-labelledby="skills-title">
-                <h3 id="skills-title">Навыки</h3>
-                <ul class="skills-list">
-                    <li>Базовый монтаж</li>
-                    <li>Базовое понимание жанров</li>
-                    <li>Умение подбирать саундтреки</li>
-                </ul>
-            </section>
-
-            <!-- GRID-ГАЛЕРЕЯ -->
-            <section id="directors" aria-labelledby="directors-title">
-                <h3 id="directors-title">Любимые режиссёры</h3>
-
-                <div class="directors-grid">
-                    <figure class="director-card">
-                        <img src="https://picsum.photos/seed/nolan/400/400"
-                             alt="Фото режиссёра Кристофера Нолана" width="400" height="400" loading="lazy">
-                        <figcaption>
-                            <strong>Кристофер Нолан</strong>
-                            <span>«Интерстеллар»</span>
-                        </figcaption>
-                    </figure>
-
-                    <figure class="director-card">
-                        <img src="https://picsum.photos/seed/cameron/400/400"
-                             alt="Фото режиссёра Джеймса Кэмерона" width="400" height="400" loading="lazy">
-                        <figcaption>
-                            <strong>Джеймс Кэмерон</strong>
-                            <span>«Аватар»</span>
-                        </figcaption>
-                    </figure>
-
-                    <figure class="director-card">
-                        <img src="https://picsum.photos/seed/villeneuve/400/400"
-                             alt="Фото режиссёра Дени Вильнёва" width="400" height="400" loading="lazy">
-                        <figcaption>
-                            <strong>Дени Вильнёв</strong>
-                            <span>«Дюна»</span>
-                        </figcaption>
-                    </figure>
-
-                    <figure class="director-card">
-                        <img src="https://picsum.photos/seed/tarantino/400/400"
-                             alt="Фото режиссёра Квентина Тарантино" width="400" height="400" loading="lazy">
-                        <figcaption>
-                            <strong>Квентин Тарантино</strong>
-                            <span>«Криминальное чтиво»</span>
-                        </figcaption>
-                    </figure>
-                </div>
-            </section>
-        </main>
-
-        <aside aria-labelledby="genre-title">
-            <h3 id="genre-title">Любимый жанр</h3>
-            <p>Научная фантастика</p>
-        </aside>
-    </div>
-
-    <section id="feedback" class="feedback" aria-labelledby="feedback-title">
-        <h3 id="feedback-title">Обратная связь</h3>
-        <form action="#" method="post" novalidate>
-            <label>Имя:
-                <input type="text" name="user_name" placeholder="Введите ваше имя" required>
-            </label>
-            <label>Email:
-                <input type="email" name="user_email" placeholder="example@mail.ru" required>
-            </label>
-            <label>Сообщение:
-                <textarea name="user_message" placeholder="Напишите отзыв или предложение"
-                          rows="4" required></textarea>
-            </label>
-            <button type="submit" class="btn-submit">Отправить</button>
-        </form>
-    </section>
+    <main>
+    </main>
 
     <footer>
         <p>&copy; Copyright 2026</p>
