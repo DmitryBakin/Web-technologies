@@ -30,3 +30,20 @@ const longMoviesSum = calculateSum(longMovies);
 const maxDuration = findMax(movieDurations);
 
 alert(`Привет, ${userName}! Общая длительность просмотра – ${totalDuration} минут, из них ${longMoviesSum} минут – полнометражные фильмы.`);
+
+let shortMoviesCount = 0;
+let shortMoviesSum = 0;
+
+for (let i = 0; i < movieDurations.length; i++) {
+    if (movieDurations[i] <= 40) {
+        shortMoviesCount++;
+        shortMoviesSum += movieDurations[i];
+    }
+}
+
+console.log(`Количество короткометражек: ${shortMoviesCount}`);
+console.log(`Суммарная длительность короткометражек: ${shortMoviesSum} минут`);
+
+if (maxDuration >= 180) {
+    console.log("Это почти как полноценный театральный спектакль!");
+}
