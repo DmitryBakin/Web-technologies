@@ -217,3 +217,46 @@ section h3 {
         flex: 1 1 calc(33.333% - 20px);
     }
 }
+
+a:visited {
+    color: #d4af37;
+}
+
+nav a:focus {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+}
+
+input:focus,
+textarea:focus {
+    outline: 3px solid #d4af37;
+    outline-offset: 2px;
+}
+
+.btn-submit {
+    padding: 10px 18px;
+    background-color: #d4af37;
+    color: #000000;
+    border: 2px solid #d4af37;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #000000;
+}
+
+.btn-submit:active {
+    background-color: #b8962e;
+    border-color: #b8962e;
+    color: #000000;
+}
+
+.btn-submit:focus {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+}
