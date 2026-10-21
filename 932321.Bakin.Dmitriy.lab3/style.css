@@ -147,7 +147,8 @@ section h3 {
     font-size: 15px;
 }
 
-.btn-details {
+.btn-details,
+.btn-details:visited {
     align-self: flex-start;
     margin-top: 6px;
     padding: 8px 14px;
@@ -259,4 +260,38 @@ textarea:focus {
 .btn-submit:focus {
     outline: 3px solid #ffffff;
     outline-offset: 2px;
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 600px;
+}
+
+.feedback-form label {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    border: 2px solid #d4af37;
+    border-radius: 6px;
+    font-family: Georgia, serif;
+    font-size: 15px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #8a8a8a;
+}
+
+textarea {
+    resize: vertical;
 }
