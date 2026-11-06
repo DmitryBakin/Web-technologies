@@ -305,3 +305,66 @@ textarea:focus {
         flex: 1 1 calc((100% - 40px) / 3);
     }
 }
+
+/* ===== Лабораторная №5: таблица «К просмотру» ===== */
+.hidden {
+    display: none !important;
+}
+
+#watchlist {
+    margin-top: 40px;
+}
+
+.watchlist-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.watchlist-controls button,
+.btn-delete {
+    padding: 9px 14px;
+    background-color: var(--accent, #d4af37);
+    color: var(--accent-text, #000);
+    border: 2px solid var(--border, #d4af37);
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.watchlist-controls button:hover,
+.btn-delete:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.btn-delete {
+    padding: 6px 10px;
+    font-size: 13px;
+}
+
+#films-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--panel, #1a1a1a);
+    color: var(--text-light, #f5f5f5);
+}
+
+#films-table th,
+#films-table td {
+    border: 1px solid var(--border, #d4af37);
+    padding: 10px 12px;
+    text-align: left;
+}
+
+#films-table th {
+    background-color: var(--accent, #d4af37);
+    color: var(--accent-text, #000);
+    font-family: Arial, sans-serif;
+}
+
+#films-table tbody tr:nth-child(even) {
+    background-color: rgba(212, 175, 55, 0.08);
+}
