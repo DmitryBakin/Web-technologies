@@ -120,5 +120,21 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Не найдена кнопка: #add-film-btn');
     }
 
+    if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+            const rows = tbody.querySelectorAll('tr');
+
+            if (rows.length === 0) {
+                alert('Список уже пуст');
+                return;
+            }
+
+            rows.forEach((row) => row.remove());
+            saveFilms();
+        });
+    } else {
+        console.error('Не найдена кнопка: #clear-films-btn');
+    }
+
     loadFilms();
 });
