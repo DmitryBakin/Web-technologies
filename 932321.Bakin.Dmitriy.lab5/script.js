@@ -165,6 +165,18 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Не найдена кнопка: #toggle-theme-btn');
     }
 
+    if (toggleTableBtn && tableWrapper) {
+        toggleTableBtn.addEventListener('click', () => {
+            tableWrapper.classList.toggle('hidden');
+
+            const isHidden = tableWrapper.classList.contains('hidden');
+            toggleTableBtn.textContent = isHidden ? 'Показать таблицу' : 'Скрыть таблицу';
+        });
+    } else {
+        if (!toggleTableBtn) console.error('Не найдена кнопка: #toggle-table-btn');
+        if (!tableWrapper) console.error('Не найден контейнер: #table-wrapper');
+    }
+
     loadTheme();
     loadFilms();
 });
