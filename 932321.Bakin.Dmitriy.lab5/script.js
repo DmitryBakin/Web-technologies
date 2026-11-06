@@ -1,55 +1,16 @@
-const movieDurations = [135, 90, 180, 35, 150, 115, 210];
+document.addEventListener('DOMContentLoaded', () => {
+    const STORAGE_FILMS = 'watchlistFilms';
+    const STORAGE_THEME = 'watchlistTheme';
 
-const userName = prompt("Введите ваше имя:") || "Гость";
+    const tbody = document.getElementById('films-tbody');
+    const addBtn = document.getElementById('add-film-btn');
+    const clearBtn = document.getElementById('clear-films-btn');
+    const themeBtn = document.getElementById('toggle-theme-btn');
+    const toggleTableBtn = document.getElementById('toggle-table-btn');
+    const tableWrapper = document.querySelector('#table-wrapper');
 
-function findMax(arr) {
-    let max = arr[0];
-    for (let i = 1; i < arr.length; i++) {
-        if (arr[i] > max) {
-            max = arr[i];
-        }
+    if (!tbody) {
+        console.error('Не найден элемент: #films-tbody');
+        return;
     }
-    return max;
-}
-
-function filterHighScores(arr) {
-    return arr.filter(duration => duration > 120);
-}
-
-function calculateSum(arr) {
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
-    }
-    return sum;
-}
-
-function countShortMovies(arr) {
-    let count = 0;
-    let sum = 0;
-    
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] <= 40) {
-            count++;
-            sum += arr[i];
-        }
-    }
-    
-    return { count, sum };
-}
-
-const totalDuration = calculateSum(movieDurations);
-const longMovies = filterHighScores(movieDurations);
-const longMoviesSum = calculateSum(longMovies);
-const maxDuration = findMax(movieDurations);
-
-alert(`Привет, ${userName}! Общая длительность просмотра – ${totalDuration} минут, из них ${longMoviesSum} минут – полнометражные фильмы.`);
-
-const shortMoviesData = countShortMovies(movieDurations);
-
-console.log(`Количество короткометражек: ${shortMoviesData.count}`);
-console.log(`Суммарная длительность короткометражек: ${shortMoviesData.sum} минут`);
-
-if (maxDuration >= 180) {
-    console.log("Это почти как полноценный театральный спектакль!");
-}
+});
