@@ -91,5 +91,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    if (addBtn) {
+        addBtn.addEventListener('click', () => {
+            const title = prompt('Название фильма:');
+            if (title === null) return;
+
+            if (!title.trim()) {
+                alert('Название не может быть пустым');
+                return;
+            }
+
+            const year = prompt('Год выпуска:', '2024');
+            if (year === null) return;
+
+            const status = prompt('Статус (к просмотру / просмотрено):', 'к просмотру');
+            if (status === null) return;
+
+            const film = {
+                title: title.trim(),
+                year: year.trim() || '—',
+                status: status.trim() || 'к просмотру'
+            };
+
+            tbody.appendChild(createFilmRow(film));
+            saveFilms();
+        });
+    } else {
+        console.error('Не найдена кнопка: #add-film-btn');
+    }
+
     loadFilms();
 });
