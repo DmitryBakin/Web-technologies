@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <title>О себе</title>
 </head>
-<body>
+<body class="theme-dark">
     <header>
         <span class="badge">★</span>
         <h1>Любитель кино и сериалов</h1>
@@ -22,6 +22,7 @@
         <ul>
             <li><a href="#top-films">Проекты</a></li>
             <li><a href="#directors">Режиссёры</a></li>
+            <li><a href="#watchlist">К просмотру</a></li>
             <li><a href="#feedback">Обратная связь</a></li>
         </ul>
     </nav>
@@ -120,6 +121,44 @@
                         <span>«Криминальное чтиво» (1994)</span>
                     </figcaption>
                 </figure>
+            </div>
+        </section>
+
+        <section id="watchlist">
+            <h2>Список фильмов к просмотру</h2>
+
+            <div class="watchlist-controls">
+                <button id="add-film-btn" type="button">Добавить фильм</button>
+                <button id="clear-films-btn" type="button">Очистить список</button>
+                <button id="toggle-theme-btn" type="button">Светлая тема</button>
+                <button id="toggle-table-btn" type="button">Скрыть таблицу</button>
+            </div>
+
+            <div id="table-wrapper">
+                <table id="films-table">
+                    <thead>
+                        <tr>
+                            <th>Название</th>
+                            <th>Год</th>
+                            <th>Статус</th>
+                            <th>Действия</th>
+                        </tr>
+                    </thead>
+                    <tbody id="films-tbody">
+                        <tr>
+                            <td>Дюна: Часть вторая</td>
+                            <td>2024</td>
+                            <td>к просмотру</td>
+                            <td><button type="button" class="btn-delete">Удалить</button></td>
+                        </tr>
+                        <tr>
+                            <td>Оппенгеймер</td>
+                            <td>2023</td>
+                            <td>просмотрено</td>
+                            <td><button type="button" class="btn-delete">Удалить</button></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
