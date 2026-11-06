@@ -42,4 +42,54 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Ошибка сохранения фильмов:', error);
         }
     }
+
+    function createFilmRow(film) {
+        const tr = document.createElement('tr');
+
+        const tdTitle = document.createElement('td');
+        tdTitle.textContent = film.title;
+
+        const tdYear = document.createElement('td');
+        tdYear.textContent = film.year;
+
+        const tdStatus = document.createElement('td');
+        tdStatus.textContent = film.status;
+
+        const tdActions = document.createElement('td');
+        const delBtn = document.createElement('button');
+        delBtn.type = 'button';
+        delBtn.className = 'btn-delete';
+        delBtn.textContent = 'Удалить';
+
+        delBtn.addEventListener('click', () => {
+            tr.remove();
+            saveFilms();
+        });
+
+        tdActions.appendChild(delBtn);
+
+        tr.append(tdTitle, tdYear, tdStatus, tdActions);
+        return tr;
+    }
+
+    function renderFilms(films) {
+        tbody.innerHTML = '';
+        films.forEach((film) => {
+            tbody.appendChild(createFilmRow(film));
+        });
+    }
+
+    function loadFilms() {
+        const saved = safeParse(localStorage.getItem(STORAGE_FILMS));
+
+        if (Array.isArray(saved)) {
+            renderFilms(saved);
+        } else {
+            const initial = getFilmsFromDOM();
+            renderFilms(initial);
+            saveFilms();
+        }
+    }
+
+    loadFilms();
 });
