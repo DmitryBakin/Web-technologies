@@ -91,6 +91,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function applyTheme(theme) {
+        document.body.classList.remove('theme-light', 'theme-dark');
+        document.body.classList.add(theme === 'light' ? 'theme-light' : 'theme-dark');
+
+        if (themeBtn) {
+            themeBtn.textContent = theme === 'light' ? 'Тёмная тема' : 'Светлая тема';
+        }
+
+        try {
+            localStorage.setItem(STORAGE_THEME, theme);
+        } catch (error) {
+            console.error('Ошибка сохранения темы:', error);
+        }
+    }
+
+    function loadTheme() {
+        const savedTheme = localStorage.getItem(STORAGE_THEME);
+        applyTheme(savedTheme === 'light' ? 'light' : 'dark');
+    }
+
     if (addBtn) {
         addBtn.addEventListener('click', () => {
             const title = prompt('Название фильма:');
@@ -136,5 +156,15 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Не найдена кнопка: #clear-films-btn');
     }
 
+    if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+            const isLight = document.body.classList.contains('theme-light');
+            applyTheme(isLight ? 'dark' : 'light');
+        });
+    } else {
+        console.error('Не найдена кнопка: #toggle-theme-btn');
+    }
+
+    loadTheme();
     loadFilms();
 });
