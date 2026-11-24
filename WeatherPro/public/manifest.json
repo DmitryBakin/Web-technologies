@@ -1,0 +1,8 @@
+{
+  "name": "WeatherPro",
+  "short_name": "WeatherPro",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#eef4f8",
+  "theme_color": "#18334b"
+}

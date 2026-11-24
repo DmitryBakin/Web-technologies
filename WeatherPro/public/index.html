@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WeatherPro</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <header>
+    <h1>WeatherPro</h1>
+    <a href="/">Главная</a>
+    <a href="/about">О продукте</a>
+  </header>
+
+  <main>
+    <h2>Погода по городу</h2>
+    <p>Выберите город и единицы измерения.</p>
+
+    <label>Город:</label>
+    <select id="city">
+      <option value="Moscow">Москва</option>
+      <option value="London">Лондон</option>
+      <option value="Paris">Париж</option>
+      <option value="Tokyo">Токио</option>
+      <option value="Berlin">Берлин</option>
+    </select>
+
+    <label>Температура:</label>
+    <select id="units">
+      <option value="metric">Цельсий (°C)</option>
+      <option value="imperial">Фаренгейт (°F)</option>
+    </select>
+
+    <button id="showWeather">Показать погоду</button>
+    <div id="result">Здесь появится погода.</div>
+  </main>
+
+  <footer>© 2026 WeatherPro</footer>
+  <script src="script.js"></script>
+</body>
+</html>
