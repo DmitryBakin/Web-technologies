@@ -18,7 +18,6 @@ button.addEventListener("click", async function () {
     result.textContent = "Город не найден";
   }
 });
-
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/service-worker.js");
 }
