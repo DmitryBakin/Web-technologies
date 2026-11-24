@@ -29,8 +29,7 @@ app.get("/api/weather/:city", (req, res) => {
 
   let temp = weather.temp;
   let units = "C";
-
-  if (req.query.units === "imperial") {
+    if (req.query.units === "imperial") {
     temp = temp * 9 / 5 + 32;
     units = "F";
   }
